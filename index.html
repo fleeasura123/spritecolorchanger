@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Color Changer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <div class="menu-option">
+            <input type="file" class="upload-button" accept="image/png, image/jpeg" multiple />
+        </div>
+
+        <div class="menu-option">
+            <label>Color Threshold</label>
+            <input type="range" class="color-threshold-range" min="0" max="100" value="50">
+        </div>
+
+        <div class="menu-option">
+            <label>Alpha Threshold</label>
+            <input type="range" class="alpha-threshold-range" min="0" max="255" value="255">
+        </div>
+
+        <div class="preview-wrapper">
+            <img class="preview-image" width="280" height="280">
+        </div>
+
+        <div class="menu-option">
+            <label>Preview Speed</label>
+            <input type="range" class="preview-speed-range" min="1" max="1000" value="700">
+        </div>
+
+        <div class="menu-buttons">
+            <div class="menu-option">
+                <button class="reset-button">Reset</button>
+            </div>
+            <div class="menu-option">
+                <button class="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="colors-wrapper">
+    </div>
+
+    <div class="canvases-wrapper">
+    </div>
+
+    <script src="./utils.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
