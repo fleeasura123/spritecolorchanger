@@ -94,7 +94,8 @@
     // Save the updated images using the same filename
     const saveImagesEvent = () => {
 
-        var zip = new JSZip();
+        const zip = new JSZip();
+        const outputFolder = zip.folder('output');
 
         $g_canvasElements.forEach(canvasElement => {
 
@@ -105,7 +106,7 @@
             let dataUrl = $canvasElement.toDataURL('image/png').replace('data:image/png;base64,', "");
 
             // Add to js zip
-            zip.file(fileName, dataUrl, { base64: true });
+            outputFolder.file(fileName, dataUrl, { base64: true });
         });
 
         zip.generateAsync({ type: "blob" })
