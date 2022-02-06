@@ -1,5 +1,4 @@
 # Sprite Color Changer
----
 
 **Access here**: https://fleeasura123.github.io/spritecolorchanger/
 
