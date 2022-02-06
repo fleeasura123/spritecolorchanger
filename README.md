@@ -15,6 +15,7 @@
 - **Preview Speed** - speed of animating the sprites.
 - **Reset** - back to start after the uploading of images/sprites.
 - **Save** - save the updated sprites, output will be on **output.zip output folder**.
+- **Alpha on Color** - will change the alpha of the color. If color1 alpha is 255 and color2 alpha is 100 and these 2 colors have the same color threshold, once we change the alpha of color1 it will also change the alpha of color2. Therefore, they will have the same alpha, for example, 50 alpha, but we can't go back to 255 and 100 alpha.
 
 ## Demo
 [![Demo Video](http://img.youtube.com/vi/id/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
