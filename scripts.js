@@ -94,20 +94,25 @@
     // Save the updated images using the same filename
     const saveImagesEvent = () => {
 
+        var zip = new JSZip();
+
         $g_canvasElements.forEach(canvasElement => {
 
             const $canvasElement = canvasElement.canvas;
             const fileName = canvasElement.fileName;
 
-            const link = document.createElement('a');
+            // Convert canvas to base64 and remove data:image/png;base64, we only need the base64 data
+            let dataUrl = $canvasElement.toDataURL('image/png').replace('data:image/png;base64,', "");
 
-            // Set filename and the updated image
-            link.download = fileName;
-            link.href = $canvasElement.toDataURL();
-
-            // Download now
-            link.click();
+            // Add to js zip
+            zip.file(fileName, dataUrl, { base64: true });
         });
+
+        zip.generateAsync({ type: "blob" })
+            .then(function (content) {
+
+                saveAs(content, 'output.zip');
+            });
     };
 
     // Start previewing the sprites
@@ -476,7 +481,7 @@
 
             const ctx = $canvasElement.getContext('2d');
 
-             // Get the canvas image data, we will update this data
+            // Get the canvas image data, we will update this data
             const canvasImageData = ctx.getImageData(0, 0, $canvasElement.width, $canvasElement.height);
 
             for (let i = 0; i < dataIndexes.length; i++) {
@@ -534,7 +539,7 @@
 
             // Get the canvas image data, we will update this data
             const canvasImageData = ctx.getImageData(0, 0, $canvasElement.width, $canvasElement.height);
-            
+
             for (let i = 0; i < dataIndexes.length; i++) {
 
                 // Get the data index we need to update
