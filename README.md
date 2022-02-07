@@ -18,6 +18,7 @@
 - **Alpha on Color** - will change the alpha of the color. If color1 alpha is 255 and color2 alpha is 100 and these 2 colors have the same color threshold, once we change the alpha of color1 it will also change the alpha of color2. Therefore, they will have the same alpha, for example, 50 alpha, but we can't go back to 255 and 100 alpha.
 
 ## Demo
+https://www.youtube.com/watch?v=Z2zbbqkR9vw
 [![Demo Video](http://img.youtube.com/vi/Z2zbbqkR9vw/0.jpg)](http://www.youtube.com/watch?v=Z2zbbqkR9vw "Sprite Color Changer (Demo)")
 
 ## Libraries
