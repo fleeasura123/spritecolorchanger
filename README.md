@@ -19,6 +19,7 @@
 
 ## Demo
 https://www.youtube.com/watch?v=Z2zbbqkR9vw
+
 [![Demo Video](http://img.youtube.com/vi/Z2zbbqkR9vw/0.jpg)](http://www.youtube.com/watch?v=Z2zbbqkR9vw "Sprite Color Changer (Demo)")
 
 ## Libraries
